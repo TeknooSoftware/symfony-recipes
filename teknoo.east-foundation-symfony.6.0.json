@@ -9,6 +9,9 @@
           "Teknoo\\East\\FoundationBundle\\EastFoundationBundle": [
             "all"
           ]
+        },
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%"
         }
       },
       "files": {
@@ -25,7 +28,7 @@
           "executable": false
         }
       },
-      "ref": "45bec043d47583f8c3318477d5da2a67e58bed98"
+      "ref": "cff3205e2cfb0762ce7c55300ee079e7a67d4e5e"
     }
   }
 }
