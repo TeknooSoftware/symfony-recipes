@@ -1,0 +1,14 @@
+{
+  "recipes": {
+    "teknoo/east-foundation-symfony": [
+      "6.0"
+    ]
+  },
+  "branch": "master",
+  "is_contrib": true,
+  "_links": {
+    "repository": "https://github.com/TeknooSoftware/symfony-recipes",
+    "origin_template": "{package}:{version}@github.com/TeknooSoftware/symfony-recipes:master",
+    "recipe_template": "https://api.github.com/repos/TeknooSoftware/symfony-recipes/contents/{package_dotted}.{version}.json"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "manifests": {
+    "teknoo/east-foundation-symfony": {
+      "manifest": {
+        "bundles": {
+          "Teknoo\\DI\\SymfonyBridge\\DIBridgeBundle": [
+            "all"
+          ],
+          "Teknoo\\East\\FoundationBundle\\EastFoundationBundle": [
+            "all"
+          ]
+        }
+      },
+      "files": {
+        "config/packages/east_foundation.yaml": {
+          "contents": [
+            "di_bridge:",
+            "    definitions:",
+            "        - '%kernel.project_dir%/vendor/teknoo/east-foundation/src/di.php'",
+            "        - '%kernel.project_dir%/vendor/teknoo/east-foundation/infrastructures/symfony/Resources/config/di.php'",
+            "        - '%kernel.project_dir%/vendor/teknoo/east-foundation/infrastructures/symfony/Resources/config/laminas_di.php'",
+            "    import:",
+            "        Psr\\Log\\LoggerInterface: 'logger'"
+          ],
+          "executable": false
+        }
+      },
+      "ref": "45bec043d47583f8c3318477d5da2a67e58bed98"
+    }
+  }
+}
