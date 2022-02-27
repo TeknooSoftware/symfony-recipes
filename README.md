@@ -4,7 +4,7 @@ Teknoo Software - Symfony Recipes
 Repository hosting Symfony Flex Recipes dedicated to help to use Teknoo Software's libraries with Symfony 6.0 and later.
 
 To enable these recipes in your project, you must add in your `composer.json` the entry 
-`"https://api.github.com/repos/TeknooSoftware/symfony-recipes/contents/index.json"` to the list `extra.symfony.endpoint`
+`https://api.github.com/repos/TeknooSoftware/symfony-recipes/contents/index.json` to the list `extra.symfony.endpoint`
 and set to `true` the entry `extra.symfony.allow-contrib`.
 
 If the `extra.symfony.endpoint` is not already defined, you must also add `flex://defaults` to avoid errors.
