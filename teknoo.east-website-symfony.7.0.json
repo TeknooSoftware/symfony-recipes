@@ -52,9 +52,9 @@
             "                    prefix: 'Teknoo\\East\\Website\\Doctrine\\Object'"
           ],
           "executable": false
-        },
+        }
       },
-      "ref": "3b12afb1ffc9e6f3060e1e94055a5d6809aab9f5"
+      "ref": "86b761a5eb5bb1325114042268d727e8a6385e88"
     }
   }
 }
