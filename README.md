@@ -9,6 +9,8 @@ and set to `true` the entry `extra.symfony.allow-contrib`.
 
 If the `extra.symfony.endpoint` is not already defined, you must also add `flex://defaults` to avoid errors.
 
+[More infos about private recipes](https://symfony.com/doc/current/setup/flex_private_recipes.html
+
 Support this project
 ---------------------
 

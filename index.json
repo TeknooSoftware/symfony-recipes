@@ -2,6 +2,9 @@
   "recipes": {
     "teknoo/east-foundation-symfony": [
       "6.0"
+    ],
+    "teknoo/east-website-symfony": [
+      "7.0"
     ]
   },
   "branch": "master",

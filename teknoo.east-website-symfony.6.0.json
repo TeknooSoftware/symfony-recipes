@@ -1,0 +1,60 @@
+{
+  "manifests": {
+    "teknoo/east-website-symfony": {
+      "manifest": {
+        "bundles": {
+          "Doctrine\\Bundle\\MongoDBBundle\\DoctrineMongoDBBundle": [
+            "all"
+          ],
+          "Teknoo\\DI\\SymfonyBridge\\DIBridgeBundle": [
+            "all"
+          ],
+          "Teknoo\\East\\FoundationBundle\\EastFoundationBundle": [
+            "all"
+          ]
+        },
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%",
+          "website-config/": "%CONFIG_DIR%/routes"
+        }
+      },
+      "files": {
+        "config/packages/east_website_di.yaml": {
+          "contents": [
+            "di_bridge:",
+            "    definitions:",
+            "        - '%kernel.project_dir%/vendor/teknoo/east-website/src/di.php'",
+            "        - '%kernel.project_dir%/vendor/teknoo/east-website/infrastructures/doctrine/di.php'",
+            "        - '%kernel.project_dir%/vendor/teknoo/east-website/infrastructures/symfony/Resources/config/di.php'",
+            "        - '%kernel.project_dir%/vendor/teknoo/east-website/infrastructures/symfony/Resources/config/laminas_di.php'",
+            "        - '%kernel.project_dir%/vendor/teknoo/east-website/infrastructures/di.php'",
+            "    import:",
+            "        Doctrine\\Persistence\\ObjectManager: 'doctrine_mongodb.odm.default_document_manager'"
+          ],
+          "executable": false
+        },
+        "config/packages/east_website_doctrine_mongodb.yaml": {
+          "contents": [
+            "doctrine_mongodb:",
+            "    document_managers:",
+            "        default:",
+            "            auto_mapping: true",
+            "            mappings:",
+            "                TeknooEastWebsite:",
+            "                    type: 'xml'",
+            "                    dir: '%kernel.project_dir%/vendor/teknoo/east-website/infrastructures/doctrine/config/universal'",
+            "                    is_bundle: false",
+            "                    prefix: 'Teknoo\\East\\Website\\Object'",
+            "                TeknooEastWebsiteDoctrine:",
+            "                    type: 'xml'",
+            "                    dir: '%kernel.project_dir%/vendor/teknoo/east-website/infrastructures/doctrine/config/doctrine'",
+            "                    is_bundle: false",
+            "                    prefix: 'Teknoo\\East\\Website\\Doctrine\\Object'"
+          ],
+          "executable": false
+        },
+      },
+      "ref": "3b12afb1ffc9e6f3060e1e94055a5d6809aab9f5"
+    }
+  }
+}
