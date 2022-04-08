@@ -3,8 +3,12 @@
     "teknoo/east-foundation-symfony": [
       "6.0"
     ],
+    "teknoo/east-common-symfony": [
+      "1.0"
+    ],
     "teknoo/east-website-symfony": [
-      "7.0"
+      "7.0",
+      "8.0"
     ]
   },
   "branch": "master",
