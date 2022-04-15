@@ -25,10 +25,10 @@
           "contents": [
             "di_bridge:",
             "    definitions:",
-            "        - '%kernel.project_dir%/vendor/teknoo/east-website/src/di.php'",
-            "        - '%kernel.project_dir%/vendor/teknoo/east-website/infrastructures/doctrine/di.php'",
-            "        - '%kernel.project_dir%/vendor/teknoo/east-website/infrastructures/symfony/Resources/config/di.php'",
-            "        - '%kernel.project_dir%/vendor/teknoo/east-website/infrastructures/symfony/Resources/config/laminas_di.php'",
+            "        - '{ priority: 10, %kernel.project_dir%/vendor/teknoo/east-website/src/di.php' }",
+            "        - '{ priority: 10, %kernel.project_dir%/vendor/teknoo/east-website/infrastructures/doctrine/di.php' }",
+            "        - '{ priority: 10, %kernel.project_dir%/vendor/teknoo/east-website/infrastructures/symfony/Resources/config/di.php' }",
+            "        - '{ priority: 10, %kernel.project_dir%/vendor/teknoo/east-website/infrastructures/symfony/Resources/config/laminas_di.php' }",
             "    import:",
             "        Doctrine\\Persistence\\ObjectManager: 'doctrine_mongodb.odm.default_document_manager'"
           ],
@@ -107,7 +107,7 @@
           "executable": false
         }
       },
-      "ref": "16b715a5fb5bb1345224442368d777e8a6385e88"
+      "ref": "26b715a5fb5bb1345224442368d777e8a6385e88"
     }
   }
 }

@@ -22,11 +22,11 @@
           "contents": [
             "di_bridge:",
             "    definitions:",
-            "        - '%kernel.project_dir%/vendor/teknoo/east-common/src/di.php'",
-            "        - '%kernel.project_dir%/vendor/teknoo/east-common/infrastructures/doctrine/di.php'",
-            "        - '%kernel.project_dir%/vendor/teknoo/east-common/infrastructures/symfony/Resources/config/di.php'",
-            "        - '%kernel.project_dir%/vendor/teknoo/east-common/infrastructures/symfony/Resources/config/laminas_di.php'",
-            "        - '%kernel.project_dir%/vendor/teknoo/east-common/infrastructures/di.php'",
+            "        - { priority: 20, file: '%kernel.project_dir%/vendor/teknoo/east-common/src/di.php' }",
+            "        - { priority: 20, file: '%kernel.project_dir%/vendor/teknoo/east-common/infrastructures/doctrine/di.php' }",
+            "        - { priority: 20, file: '%kernel.project_dir%/vendor/teknoo/east-common/infrastructures/symfony/Resources/config/di.php' }",
+            "        - { priority: 20, file: '%kernel.project_dir%/vendor/teknoo/east-common/infrastructures/symfony/Resources/config/laminas_di.php' }",
+            "        - { priority: 20, file: '%kernel.project_dir%/vendor/teknoo/east-common/infrastructures/di.php' }",
             "    import:",
             "        Doctrine\\Persistence\\ObjectManager: 'doctrine_mongodb.odm.default_document_manager'"
           ],
@@ -125,7 +125,7 @@
           "executable": false
         }
       },
-      "ref": "14a794b8eb5cb1275224442368d727e8a6385e88"
+      "ref": "34a794b8eb5cb1275224442368d727e8a6385e88"
     }
   }
 }
