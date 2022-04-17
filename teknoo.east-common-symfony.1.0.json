@@ -118,14 +118,14 @@
         "config/routes/common.yaml": {
           "contents": [
             "admin_common:",
-            "    resource: '@TeknooEastCommonBundle/Resources/config/admin_routing.yml'",
+            "    resource: '@TeknooEastCommonBundle/Resources/config/admin_routing.yaml'",
             "    prefix: '/admin'",
             ""
           ],
           "executable": false
         }
       },
-      "ref": "34a794b8eb5cb1275224442368d727e8a6385e88"
+      "ref": "44a794b8eb5cb1275224442368d727e8a6385e88"
     }
   }
 }
