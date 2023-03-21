@@ -27,7 +27,6 @@
             "    definitions:",
             "        - '{ priority: 10, %kernel.project_dir%/vendor/teknoo/east-website/src/di.php' }",
             "        - '{ priority: 10, %kernel.project_dir%/vendor/teknoo/east-website/infrastructures/doctrine/di.php' }",
-            "        - '{ priority: 10, %kernel.project_dir%/vendor/teknoo/east-website/infrastructures/symfony/Resources/config/di.php' }",
             "    import:",
             "        Doctrine\\Persistence\\ObjectManager: 'doctrine_mongodb.odm.default_document_manager'"
           ],
@@ -106,7 +105,7 @@
           "executable": false
         }
       },
-      "ref": "46be14a5fb5cb134622446542468d757eea6355e88"
+      "ref": "46be14a5fb5cb134629745231898d757eea6355e88"
     }
   }
 }
