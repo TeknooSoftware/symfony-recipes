@@ -93,9 +93,9 @@
             "            provider: all_providers",
             "            form_login:",
             "                provider: 'with_password'",
-            "                check_path: 'admin_website_check'",
-            "                login_path: 'admin_website_login'",
-            "                default_target_path: 'admin_website_home'",
+            "                check_path: 'admin_common_check'",
+            "                login_path: 'admin_common_login'",
+            "                default_target_path: 'admin_common_home'",
             "                always_use_default_target_path: false",
             "                use_referer: true",
             "                enable_csrf: true",
@@ -104,8 +104,8 @@
             "                secure: true",
             "                httponly: true",
             "            logout:",
-            "                path: 'admin_website_logout'",
-            "                target: 'admin_website_home'",
+            "                path: 'admin_common_logout'",
+            "                target: 'admin_common_home'",
             "",
             "        main: ~",
             "",
@@ -128,7 +128,7 @@
           "executable": false
         }
       },
-      "ref": "47a714b8eb5cb1275224442368d727e8a6385e88"
+      "ref": "47a714b8eb5cb12752245642368d727e8a6385e88"
     }
   }
 }
