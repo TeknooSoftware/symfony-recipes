@@ -11,6 +11,9 @@
           ],
           "Teknoo\\East\\FoundationBundle\\EastFoundationBundle": [
             "all"
+          ],
+          "Teknoo\\East\\CommonBundle\\TeknooEastCommonBundle": [
+            "all"
           ]
         },
         "copy-from-recipe": {
@@ -125,7 +128,7 @@
           "executable": false
         }
       },
-      "ref": "44a794b8eb5cb1275224442368d727e8a6385e88"
+      "ref": "47a714b8eb5cb1275224442368d727e8a6385e88"
     }
   }
 }
