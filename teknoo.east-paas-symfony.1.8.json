@@ -1,0 +1,89 @@
+{
+  "manifests": {
+    "teknoo/east-paas-symfony": {
+      "manifest": {
+        "bundles": {
+          "Doctrine\\Bundle\\MongoDBBundle\\DoctrineMongoDBBundle": [
+            "all"
+          ],
+          "Teknoo\\DI\\SymfonyBridge\\DIBridgeBundle": [
+            "all"
+          ],
+          "Teknoo\\East\\FoundationBundle\\EastFoundationBundle": [
+            "all"
+          ],
+          "Teknoo\\East\\CommonBundle\\TeknooEastCommonBundle": [
+            "all"
+          ],
+          "Teknoo\\East\\Paas\\Infrastructures\\EastPaasBundle\\TeknooEastPaasBundle": [
+            "all"
+          ]
+        },
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%"
+        }
+      },
+      "files": {
+        "config/packages/east_paas_doctrine_mongodb.yaml": {
+          "contents": [
+            "doctrine_mongodb:",
+            "    document_managers:",
+            "        default:",
+            "            auto_mapping: true",
+            "            mappings:",
+            "                 TeknooEastPaas:",
+            "                     type: 'xml',",
+            "                     dir: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Doctrine/config/universal',",
+            "                     is_bundle: false,",
+            "                     prefix: 'Teknoo\\East\\Paas\\Object',",
+            "                 TeknooEastPaasInfrastructuresDoctrine:,",
+            "                     type: 'xml',",
+            "                     dir: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Doctrine/config/odm',",
+            "                     is_bundle: false,",
+            "                     prefix: 'Teknoo\\East\\Paas\\Infrastructures\\Doctrine\\Object\\ODM',"
+          ],
+          "executable": false
+        },
+        "config/packages/east_paas_di.yaml": {
+          "contents": [
+            "di_bridge:",
+            "    #compilation_path: '%kernel.project_dir%/var/cache/phpdi'",
+            "    definitions:,",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/src/di.php' },",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Doctrine/di.php' },",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Flysystem/di.php' },",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Git/di.php' },",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Kubernetes/di.php' },",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Image/di.php' },",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/ProjectBuilding/di.php' },",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Laminas/di.php' },",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Symfony/Components/di.php' },",
+          ],
+          "executable": false
+        },
+        "config/packages/east_paas_messenger.yaml": {
+          "contents": [
+            "framework:",
+            "    messenger:,",
+            "        routing:,",
+            "            Teknoo\\Space\\Object\\DTO\\NewJob: 'new_job',",
+            "            Teknoo\\East\\Paas\\Infrastructures\\Symfony\\Messenger\\Message\\MessageJob: 'execute_job',",
+            "            Teknoo\\East\\Paas\\Infrastructures\\Symfony\\Messenger\\Message\\HistorySent: 'history_sent',",
+            "            Teknoo\\East\\Paas\\Infrastructures\\Symfony\\Messenger\\Message\\JobDone: 'job_done',"
+          ],
+          "executable": false
+        },
+        "config/routes/common.yaml": {
+          "contents": [
+            "admin_common:",
+            "    resource: '@TeknooEastCommonBundle/Resources/config/admin_routing.yaml'",
+            "    prefix: '/admin'",
+            ""
+          ],
+          "executable": false
+        }
+      },
+      "ref": "37236345554134461235865644d727e8a6385e88"
+    }
+  }
+}
