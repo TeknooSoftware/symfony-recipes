@@ -57,7 +57,7 @@
             "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Image/di.php' },",
             "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/ProjectBuilding/di.php' },",
             "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Laminas/di.php' },",
-            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Symfony/Components/di.php' },",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Symfony/Components/di.php' },"
           ],
           "executable": false
         },
