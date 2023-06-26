@@ -32,15 +32,15 @@
             "            auto_mapping: true",
             "            mappings:",
             "                 TeknooEastPaas:",
-            "                     type: 'xml',",
-            "                     dir: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Doctrine/config/universal',",
-            "                     is_bundle: false,",
-            "                     prefix: 'Teknoo\\East\\Paas\\Object',",
-            "                 TeknooEastPaasInfrastructuresDoctrine:,",
-            "                     type: 'xml',",
-            "                     dir: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Doctrine/config/odm',",
-            "                     is_bundle: false,",
-            "                     prefix: 'Teknoo\\East\\Paas\\Infrastructures\\Doctrine\\Object\\ODM',"
+            "                     type: 'xml'",
+            "                     dir: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Doctrine/config/universal'",
+            "                     is_bundle: false",
+            "                     prefix: 'Teknoo\\East\\Paas\\Object'",
+            "                 TeknooEastPaasInfrastructuresDoctrine:",
+            "                     type: 'xml'",
+            "                     dir: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Doctrine/config/odm'",
+            "                     is_bundle: false",
+            "                     prefix: 'Teknoo\\East\\Paas\\Infrastructures\\Doctrine\\Object\\ODM'"
           ],
           "executable": false
         },
@@ -48,28 +48,28 @@
           "contents": [
             "di_bridge:",
             "    #compilation_path: '%kernel.project_dir%/var/cache/phpdi'",
-            "    definitions:,",
-            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/src/di.php' },",
-            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Doctrine/di.php' },",
-            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Flysystem/di.php' },",
-            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Git/di.php' },",
-            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Kubernetes/di.php' },",
-            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Image/di.php' },",
-            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/ProjectBuilding/di.php' },",
-            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Laminas/di.php' },",
-            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Symfony/Components/di.php' },"
+            "    definitions:",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/src/di.php' }",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Doctrine/di.php' }",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Flysystem/di.php' }",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Git/di.php' }",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Kubernetes/di.php' }",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Image/di.php' }",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/ProjectBuilding/di.php' }",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Laminas/di.php' }",
+            "       - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-paas/infrastructures/Symfony/Components/di.php' }"
           ],
           "executable": false
         },
         "config/packages/east_paas_messenger.yaml": {
           "contents": [
             "framework:",
-            "    messenger:,",
-            "        routing:,",
-            "            Teknoo\\Space\\Object\\DTO\\NewJob: 'new_job',",
-            "            Teknoo\\East\\Paas\\Infrastructures\\Symfony\\Messenger\\Message\\MessageJob: 'execute_job',",
-            "            Teknoo\\East\\Paas\\Infrastructures\\Symfony\\Messenger\\Message\\HistorySent: 'history_sent',",
-            "            Teknoo\\East\\Paas\\Infrastructures\\Symfony\\Messenger\\Message\\JobDone: 'job_done',"
+            "    messenger:",
+            "        routing:",
+            "            Teknoo\\Space\\Object\\DTO\\NewJob: 'new_job'",
+            "            Teknoo\\East\\Paas\\Infrastructures\\Symfony\\Messenger\\Message\\MessageJob: 'execute_job'",
+            "            Teknoo\\East\\Paas\\Infrastructures\\Symfony\\Messenger\\Message\\HistorySent: 'history_sent'",
+            "            Teknoo\\East\\Paas\\Infrastructures\\Symfony\\Messenger\\Message\\JobDone: 'job_done'"
           ],
           "executable": false
         },
@@ -83,7 +83,7 @@
           "executable": false
         }
       },
-      "ref": "3723ag63ef45554134461235865644d727e8a6385e88"
+      "ref": "3723ag63ef45554134461235865644d727e8a6385e89"
     }
   }
 }
