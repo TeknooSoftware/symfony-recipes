@@ -55,8 +55,6 @@
         "config/packages/east_website_security.yaml.dist": {
           "contents": [
             "security:",
-            "    enable_authenticator_manager: true",
-            "",
             "    role_hierarchy:",
             "        ROLE_ADMIN: 'ROLE_USER'",
             "",
@@ -173,7 +171,7 @@
           "executable": false
         }
       },
-      "ref": "86b785a5eb5bb1375114442368d727e8a6385e88"
+      "ref": "86b785a5eb5bb1375114442368d7272023092801"
     }
   }
 }

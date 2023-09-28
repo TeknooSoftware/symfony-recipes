@@ -58,8 +58,6 @@
         "config/packages/east_common_security.yaml.dist": {
           "contents": [
             "security:",
-            "    enable_authenticator_manager: true",
-            "",
             "    role_hierarchy:",
             "        ROLE_ADMIN: 'ROLE_USER'",
             "",
@@ -133,7 +131,7 @@
           "executable": false
         }
       },
-      "ref": "44a794beeb5cb1487456443984d727e8a6385e88"
+      "ref": "44a794beeb5cb1487456443984d727e823092801"
     }
   }
 }
