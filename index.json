@@ -5,7 +5,8 @@
     ],
     "teknoo/east-common-symfony": [
       "1.0",
-      "1.9"
+      "1.9",
+      "2.4"
     ],
     "teknoo/east-paas-symfony": [
       "1.8"
