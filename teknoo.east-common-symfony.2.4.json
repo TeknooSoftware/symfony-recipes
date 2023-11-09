@@ -128,12 +128,16 @@
             "admin_common:",
             "    resource: '@TeknooEastCommonBundle/Resources/config/admin_routing.yaml'",
             "    prefix: '/admin'",
+            "",
+            "common_assets:",
+            "    resource: '@TeknooEastCommonBundle/Resources/config/assets_routing.yaml'",
+            "    prefix: '/build'",
             ""
           ],
           "executable": false
         }
       },
-      "ref": "44a794beeb5cb1487456443984d727e823110901"
+      "ref": "44a794beeb5cb1487456443984d727e823110902"
     }
   }
 }
