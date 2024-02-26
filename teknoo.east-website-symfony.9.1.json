@@ -11,6 +11,9 @@
           ],
           "Teknoo\\East\\FoundationBundle\\EastFoundationBundle": [
             "all"
+          ],
+          "Teknoo\\East\\CommonBundle\\TeknooEastCommonBundle": [
+            "all"
           ]
         },
         "copy-from-recipe": {
@@ -22,11 +25,8 @@
           "contents": [
             "di_bridge:",
             "    definitions:",
-            "        - '%kernel.project_dir%/vendor/teknoo/east-website/src/di.php'",
-            "        - '%kernel.project_dir%/vendor/teknoo/east-website/infrastructures/doctrine/di.php'",
-            "        - '%kernel.project_dir%/vendor/teknoo/east-website/infrastructures/symfony/Resources/config/di.php'",
-            "        - '%kernel.project_dir%/vendor/teknoo/east-website/infrastructures/symfony/Resources/config/laminas_di.php'",
-            "        - '%kernel.project_dir%/vendor/teknoo/east-website/infrastructures/di.php'",
+            "        - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-website/src/di.php' }",
+            "        - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-website/infrastructures/doctrine/di.php' }",
             "    import:",
             "        Doctrine\\Persistence\\ObjectManager: 'doctrine_mongodb.odm.default_document_manager'"
           ],
@@ -49,72 +49,6 @@
             "                    dir: '%kernel.project_dir%/vendor/teknoo/east-website/infrastructures/doctrine/config/doctrine'",
             "                    is_bundle: false",
             "                    prefix: 'Teknoo\\East\\Website\\Doctrine\\Object'"
-          ],
-          "executable": false
-        },
-        "config/packages/east_website_security.yaml.dist": {
-          "contents": [
-            "security:",
-            "    role_hierarchy:",
-            "        ROLE_ADMIN: 'ROLE_USER'",
-            "",
-            "    providers:",
-            "        with_password:",
-            "            id: 'Teknoo\\East\\WebsiteBundle\\Provider\\PasswordAuthenticatedUserProvider'",
-            "        from_third_party:",
-            "            id: 'Teknoo\\East\\WebsiteBundle\\Provider\\ThirdPartyAuthenticatedUserProvider'",
-            "        all_providers:",
-            "            chain:",
-            "                providers: ['with_password', 'from_third_party']",
-            "    password_hashers:",
-            "        Teknoo\\East\\WebsiteBundle\\Object\\PasswordAuthenticatedUser:",
-            "            algorithm: '%teknoo.east.website.bundle.password_authenticated_user_provider.default_algo%'",
-            "",
-            "    firewalls:",
-            "        # disables authentication for assets and the profiler, adapt it according to your needs",
-            "        dev:",
-            "            pattern: ^/(_(profiler|wdt)|css|images|js)/",
-            "            security: false",
-            "",
-            "        #Admin area, allow anonymous for login",
-            "        admin_login:",
-            "            pattern: '^/admin/login$'",
-            "            security: false",
-            "",
-            "        admin_gitlab_login:",
-            "            pattern: '^/admin/gitlab/login$'",
-            "            security: false",
-            "",
-            "        #require admin role for all others pages",
-            "        admin_area:",
-            "            pattern: '^/admin'",
-            "            custom_authenticators:",
-            "                - '%teknoo.east.website.bundle.security.authenticator.oauth2.class%'",
-            "            provider: all_providers",
-            "            form_login:",
-            "                provider: 'with_password'",
-            "                check_path: 'admin_website_check'",
-            "                login_path: 'admin_website_login'",
-            "                default_target_path: 'admin_website_home'",
-            "                always_use_default_target_path: false",
-            "                use_referer: true",
-            "                enable_csrf: true",
-            "            remember_me:",
-            "                secret: '%env(APP_REMEMBER_SECRET)%'",
-            "                secure: true",
-            "                httponly: true",
-            "            logout:",
-            "                path: 'admin_website_logout'",
-            "                target: 'admin_website_home'",
-            "",
-            "        main: ~",
-            "",
-            "    access_control:",
-            "        #Admin : require role admin",
-            "        - { path: '^/admin', roles: ROLE_ADMIN, requires_channel: https }",
-            "        #Front : available for anyone",
-            "        - { path: '^/', requires_channel: https }",
-            ""
           ],
           "executable": false
         },
@@ -161,17 +95,17 @@
             "        errorTemplate: '@@TeknooEastWebsite/Error/404.html.twig'",
             "",
             "admin_website:",
-            "    resource: '@TeknooEastWebsiteBundle/Resources/config/admin_routing.yml'",
+            "    resource: '@TeknooEastWebsiteBundle/Resources/config/admin_routing.yaml'",
             "    prefix: '/admin'",
             "",
             "website:",
-            "    resource: '@TeknooEastWebsiteBundle/Resources/config/routing.yml'",
+            "    resource: '@TeknooEastWebsiteBundle/Resources/config/routing.yaml'",
             ""
           ],
           "executable": false
         }
       },
-      "ref": "86b785a5eb5bb1375114442368d7272023092801"
+      "ref": "46be14a5fb5cb134629745231898d75a2024022601"
     }
   }
 }
