@@ -1,0 +1,53 @@
+{
+  "manifests": {
+    "teknoo/east-translation-symfony": {
+      "manifest": {
+        "bundles": {
+          "Doctrine\\Bundle\\MongoDBBundle\\DoctrineMongoDBBundle": [
+            "all"
+          ],
+          "Teknoo\\DI\\SymfonyBridge\\DIBridgeBundle": [
+            "all"
+          ],
+          "Teknoo\\East\\FoundationBundle\\EastFoundationBundle": [
+            "all"
+          ],
+          "Teknoo\\East\\CommonBundle\\TeknooEastCommonBundle": [
+            "all"
+          ]
+        },
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%"
+        }
+      },
+      "files": {
+        "config/packages/east_translation_di.yaml": {
+          "contents": [
+            "di_bridge:",
+            "    definitions:",
+            "        - { priority: 10, file: '%kernel.project_dir%/vendor/teknoo/east-translation/infrastructures/doctrine/di.php' }",
+            "    import:",
+            "        Doctrine\\Persistence\\ObjectManager: 'doctrine_mongodb.odm.default_document_manager'"
+          ],
+          "executable": false
+        },
+        "config/packages/east_translation_doctrine_mongodb.yaml": {
+          "contents": [
+            "doctrine_mongodb:",
+            "    document_managers:",
+            "        default:",
+            "            auto_mapping: true",
+            "            mappings:",
+            "                TeknooEastTranslationDoctrine:",
+            "                    type: 'xml'",
+            "                    dir: '%kernel.project_dir%/vendor/teknoo/east-translation/infrastructures/doctrine/config/doctrine'",
+            "                    is_bundle: false",
+            "                    prefix: 'Teknoo\\East\\Translation\\Doctrine\\Object'"
+          ],
+          "executable": false
+        }
+      },
+      "ref": "46be14a5fb5cb134629745231898d7EE2024111001"
+    }
+  }
+}
