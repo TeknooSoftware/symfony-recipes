@@ -1,19 +1,19 @@
 {
   "recipes": {
     "teknoo/east-foundation-symfony": [
-      "8.0"
+      "9.0"
     ],
     "teknoo/east-common-symfony": [
-      "3.0"
+      "4.1"
     ],
     "teknoo/east-paas-symfony": [
-      "4.0"
+      "5.1"
     ],
     "teknoo/east-translation-symfony": [
       "1.0"
     ],
     "teknoo/east-website-symfony": [
-      "10.0"
+      "11.1"
     ]
   },
   "branch": "master",

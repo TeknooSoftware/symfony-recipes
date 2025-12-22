@@ -95,17 +95,17 @@
             "        errorTemplate: '@@TeknooEastWebsite/Error/404.html.twig'",
             "",
             "admin_website:",
-            "    resource: '@TeknooEastWebsiteBundle/Resources/config/admin_routing.yaml'",
+            "    resource: '@TeknooEastWebsiteBundle/config/admin_routing.yaml'",
             "    prefix: '/admin'",
             "",
             "website:",
-            "    resource: '@TeknooEastWebsiteBundle/Resources/config/routing.yaml'",
+            "    resource: '@TeknooEastWebsiteBundle/config/routing.yaml'",
             ""
           ],
           "executable": false
         }
       },
-      "ref": "46be14a5fb5cb134629745231898d7DD2024111001"
+      "ref": "46be14a5fb5cb134629745231898d7DD2025122201"
     }
   }
 }
